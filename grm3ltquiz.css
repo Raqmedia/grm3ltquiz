@@ -1,0 +1,202 @@
+    <style>
+        .grmltquiz-container {
+            max-width: fit-content;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .modern-notice {
+            background-color: #e6f2f8;
+            color: #464646;
+            padding: 13px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .exercise-selection {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+		.exercise-btn:hover {
+            background-color: #8ed8f7;
+        }
+
+        .exercise-btn {
+            background-color: #f1c512;
+            font-size: 16px;
+            color: #464646;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 30px;
+			font-weight: 600;
+        }
+
+        .question {
+            margin-bottom: 40px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 40px;
+			align-items: center;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 40px;
+            margin-bottom: 35px;
+        }
+
+        button2 {
+            padding: 10px 20px;
+			background-color: #f0e9d1;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 180px;
+            border: none;
+            border-radius: 7px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .highlighted {
+            background-color: #3498db; /* Blue color for the highlighted option */
+            color: #fff;
+        }
+
+        .correct {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .incorrect {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .options button2:hover {
+            background-color: #45d856;
+			color: #fff!important;
+        }
+
+        #checkBtn {
+            background-color: #ffc107;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 40px;
+            transition: background-color 0.3s ease;
+        }
+
+        #checkBtn:hover {
+            background-color: #B348C5;
+			color: #fff!important;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #feedback {
+            color: #dc3545;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        #resetBtn,
+        #shuffleBtn,
+		#revealQuestionsBtn {
+            background-color: #90A2A5;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+			margin-bottom: 35px;
+            transition: background-color 0.3s ease;
+        }
+
+		#resetBtn:hover,
+        #shuffleBtn:hover,
+		#revealQuestionsBtn:hover {
+        background-color: #ef5043;
+        }
+
+        #optionsDisplay {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .question-list {
+            text-align: left;
+        }
+
+        .question-item {
+            margin-bottom: 10px;
+            border: 1px solid #d1d1d1;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .question-number {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .selected-option,
+        .correct-answer {
+            margin-right: 10px;
+        }
+
+        #timer {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+		        .correct-answer {
+            color: #4caf50;
+        }
+
+        .incorrect-answer {
+            color: #e74c3c;
+        }	
+
+    #revealQuestionsBtn span {
+        margin-right: 10px;
+    }
+
+    #revealQuestionsBtn i {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    #revealQuestionsBtn.loading i {
+        display: block;
+    }
+    </style>
